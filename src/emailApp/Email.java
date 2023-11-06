@@ -13,20 +13,20 @@ public class Email {
     private String alternativeEmail;
 
 
-    //Contructor. Parametros nombre y apellido
+
     public Email(){
         this.firstName = setFirstName();
         this.lastName = setLastName();
 
 
-        //Llamamos el metodo sobre el departamento al que desea llamar y lo regresa
+
         this.department = setDepartment();
 
-        //Llamamos al metodo que nos regresa una contraseña aleatoria
+
         this.password = randomPassword(defaultPasswordLenght);
         System.out.println("Your password is: "+this.password);
 
-        // Generar el email
+
         email = firstName.toLowerCase()+"."+lastName.toLowerCase()+"@"+department+ ".youtube.com";
     }
 
@@ -62,9 +62,7 @@ public class Email {
         }
     }
 
-    //RamondonPassword genera una contraseña aleatoria
-    //String passwordSet son los caracteres que se pueden utilizar para generarla
-    // en cada iteracion del bucle se crea un numero int aleatorio y se multp x el largo de psswrd set.
+
 
     private String randomPassword(int lenght){
         String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYS123456789!@#$%";
@@ -89,7 +87,7 @@ public class Email {
     }
 
 
-    // estos metodos acceden a las propiedades. Encapsulación
+
     public int getMailboxCapacity(){
         return mailboxCapacity;
     }
